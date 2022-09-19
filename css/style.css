@@ -18,6 +18,7 @@
 
 html,
 body {
+  position: relative;
   font-family: ui-monospace, system-ui, fantasy;
   font-size: 18px;
   width: 100%;
@@ -26,7 +27,7 @@ body {
   background-size: cover; */
 }
 body::before{
-      background: url("../img/background.png") no-repeat center center;
+      background: url("../img/background.png") no-repeat right bottom;
     background-size: cover;
     content: ' ';
     height: 100%;
