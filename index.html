@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Портфолио - Лемешков Данил</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/swipe.min.css">
+	<link rel="icon" href="./img/Logo2.png">
+</head>
+
+<body>
+	<nav id="menu-content">
+		<ul id="menu-frame">
+			<li><a draggable="false" href="#page1" class="active">Главная</a></li>
+			<li><a draggable="false" href="#page2">О себе</a></li>
+			<li><a draggable="false" href="#page3">Навыки</a></li>
+			<li><a draggable="false" href="#page4">Мои работы</a></li>
+			<li><a draggable="false" href="#page5">Контакты</a></li>
+		</ul>
+	</nav>
+
+	<section id="page1" class="page">
+		<div class="page-area">
+			<header>
+				<h1>Frontend-разработчик<br>Лемешков Данил<br>
+					Васильевич</h1>
+				<img src="./img/6502421.png" alt="notebook" class="title-img">
+			</header>
+		</div>
+	</section>
+	<section id="page2" class="page">
+		<div class="page-area">
+			<h3>О себе</h3>
+			<p>Опыт работы с командой, разработка и верстка WEB-приложений. Веду деловую переписку. Пунктуальный,
+				грамотный. Охотно и быстро воспринимаю информацию по указаной тематике. Хочу стать востребованным
+				профессионалом в области Fronted-developer.</p>
+				<span class="user-image"></span>
+			<!-- <img src="./img/user.png" alt="Создатель портфолио" class="user-image" srcset=""> -->
+		</div>
+	</section>
+	<section id="page3" class="page">
+		<div class="page-area">
+			<h3>Навыки</h3>
+			<ul>
+				<li>articulate 360</li>
+				<li>HTML5</li>
+				<li>git</li>
+				<li>JavaScript</li>
+				<li>CSS3</li>
+				<li>Adobe Photoshop</li>
+			</ul>
+		</div>
+	</section>
+	<section id="page4" class="page">
+		<div class="page-area">
+			<h3>Мои работы</h3>
+			<div class="blog-slider">
+				<div class="blog-slider__wrp swiper-wrapper">
+					<div class="blog-slider__item swiper-slide">
+						<div class="blog-slider__img">
+
+							<img src="./img/project3.png" alt="">
+						</div>
+						<div class="blog-slider__content">
+							<span class="blog-slider__code">29 декабря 2021</span>
+							<div class="blog-slider__title">Функционал Storyline и Rise</div>
+							<div class="blog-slider__text">Сборник решений, таких слайдов как информативных, интерактивных,
+								тренажеров и пр. собраные в Rise и Storyline</div>
+							<a href="#" class="blog-slider__button">ПОСМОТРЕТЬ</a>
+						</div>
+					</div>
+
+					<div class="blog-slider__item swiper-slide">
+						<div class="blog-slider__img">
+							<img src="./img/project2.png" alt="">
+						</div>
+						<div class="blog-slider__content">
+							<span class="blog-slider__code">7 января 2022</span>
+							<div class="blog-slider__title">Блог начинающего верстальшика</div>
+							<div class="blog-slider__text">Исходящий проект обучающей школы HTML Academy</div>
+							<a href="#" class="blog-slider__button">ПОСМОТРЕТЬ</a>
+						</div>
+					</div>
+
+					<div class="blog-slider__item swiper-slide">
+						<div class="blog-slider__img">
+							<img src="./img/project.jpg" alt="">
+						</div>
+						<div class="blog-slider__content">
+							<span class="blog-slider__code">5 января 2022</span>
+							<div class="blog-slider__title">Первый шаблон для вэб-магазина</div>
+							<div class="blog-slider__text">Исходящий проект обучающей школы HTML Academy</div>
+							<a href="#" class="blog-slider__button">ПОСМОТРЕТЬ</a>
+						</div>
+					</div>
+
+
+
+
+					<div class="blog-slider__item swiper-slide">
+						<div class="blog-slider__img">
+							<img src="./img/project4.png" alt="Дизайн аркады">
+						</div>
+						<div class="blog-slider__content">
+							<span class="blog-slider__code">------------</span>
+							<div class="blog-slider__title">Аркадная игра</div>
+							<div class="blog-slider__text">Данный проект находится на стадии разработки</div>
+							<a href="#" class="blog-slider__button">ПОСМОТРЕТЬ</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="blog-slider__pagination"></div>
+			</div>
+		</div>
+	</section>
+
+	<section id="page5" class="page">
+		<div class="page-area">
+			<h3>Мои контакты</h3>
+		</div>
+	</section>
+	<footer>
+		<p>Портфолио ©2022 Все права защищены</p>
+	</footer>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
+	<script src="./script.js"></script>
+	<!-- 	<script>
+		$(function () {
+			$('html, body').animate({
+				scrollTop: 0
+			}, 1);
+		});
+	</script> -->
+</body>
+
+</html>
