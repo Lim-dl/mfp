@@ -45,3 +45,13 @@ nav.find('a').on('click', function () {
 
   return false;
 }); */
+
+$('a[href^="#"]').on('click', function(e) { // Если ссылка является якорем, то выполняем следующее:
+  let link = $(this).attr('href'), // берём ссылку якоря. Она же по факту id элемента
+      el = $(document).find(link); // ищем элемент
+  if(el.length > 0) { // если он существует
+    el = el.eq(0).offset().top; // берём ПЕРВЫЙ элемент
+    $(window).scrollTop(el); // выполняем к нему скролл
+  }
+  return false; // Отменяем переход по ссылке => и вывод якоря в адресную строку
+});
