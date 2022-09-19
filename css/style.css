@@ -160,10 +160,11 @@ section {
   min-width: calc(100vw-8px);
 }
 
-h1{
+h1 {
   font-family: "Courier New", Courier, monospace;
 }
-h1::first-line{
+
+h1::first-line {
   font-size: 25px;
 }
 
@@ -191,14 +192,15 @@ header {
   width: 100%;
 }
 
-.markerText{
+.markerText {
   animation: pointInput 1s cubic-bezier(0.85, 0.02, 0, 0.97) infinite;
 }
+
 @keyframes pointInput {
-  /* 0%{color:white;} */
-  49%{color: transparent;}
-  50%{color: black;}
-  /* 100%{color:black;} */
+  0%{color: #000;}
+  49%{color: #000;}
+  50%{color: transparent;}
+  100%{color: transparent;}
 }
 
 .title-img {
