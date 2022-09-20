@@ -70,7 +70,7 @@ function fun1(num, txt) {
   if (num++ < txt.length) {
     if (num > txt.length - 1) return 0;
     document.querySelector(".textAnimated").innerText += txt[num];
-    setTimeout(fun1, 100, num, txt);
+    setTimeout(fun1, 50, num, txt);
     console.log(num, txt, txt[num]);
   }
 }
