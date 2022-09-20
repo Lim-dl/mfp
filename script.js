@@ -1,3 +1,4 @@
+//Плагин свайпер (в дальнейшем будет выключен)
 var swiper = new Swiper('.blog-slider', {
   spaceBetween: 30,
   effect: 'fade',
@@ -12,6 +13,8 @@ var swiper = new Swiper('.blog-slider', {
   }
 });
 
+
+//Отслеживание позиции скролла и переключение стилей активной страницы
 var sections = $('section')
   , nav = $('nav')
   , nav_height = nav.outerHeight();
@@ -46,12 +49,30 @@ nav.find('a').on('click', function () {
   return false;
 }); */
 
-$('a[href^="#"]').on('click', function(e) { // Если ссылка является якорем, то выполняем следующее:
+
+//Запрет показа якорей в адресной строке
+$('a[href^="#"]').on('click', function (e) { // Если ссылка является якорем, то выполняем следующее:
   let link = $(this).attr('href'), // берём ссылку якоря. Она же по факту id элемента
-      el = $(document).find(link); // ищем элемент
-  if(el.length > 0) { // если он существует
+    el = $(document).find(link); // ищем элемент
+  if (el.length > 0) { // если он существует
     el = el.eq(0).offset().top; // берём ПЕРВЫЙ элемент
     $(window).scrollTop(el); // выполняем к нему скролл
   }
   return false; // Отменяем переход по ссылке => и вывод якоря в адресную строку
 });
+
+//Показ стартово хэдинга побуквенно (эффект печати)
+
+let textHeading = document.querySelector(".textAnimated").innerText;
+document.querySelector(".textAnimated").innerText = "";
+
+function fun1(num, txt) {
+  if (num++ < txt.length) {
+    if (num > txt.length - 1) return 0;
+    document.querySelector(".textAnimated").innerText += txt[num];
+    setTimeout(fun1, 100, num, txt);
+    console.log(num, txt, txt[num]);
+  }
+}
+
+fun1(-1, textHeading);
