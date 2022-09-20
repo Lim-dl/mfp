@@ -202,7 +202,7 @@ header {
 
 @media screen and (max-width: 610px) {
   header {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   h1 {
