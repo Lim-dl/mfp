@@ -217,6 +217,11 @@ h1 {
   font-size: clamp(32px, 3vw, 60px); */
 }
 
+h3{
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
 #page2 {
   backdrop-filter: blur(20px);
   box-shadow: 0 0 25px 1px #00000038;
@@ -227,8 +232,10 @@ h1 {
   background-position-y: center;
   background-position-x: center;
   background-size: cover;
+  margin-top: 25px;
   width: 100%;
   height: 73vh;
+
 }
 
 
