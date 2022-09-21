@@ -732,9 +732,9 @@ h3 {
 }
 
 .skill-icon {
-  position: relative;
   float: left;
-  width: 77px;
+  height: 98px;
+  margin: 0 10px 0 0; 
 }
 
 .level {
