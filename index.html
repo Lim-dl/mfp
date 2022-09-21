@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,108 +8,8 @@
 	<link rel="stylesheet" href="./css/style.css">
 	<link rel="stylesheet" href="./css/swipe.min.css">
 	<link rel="icon" href="./img/Logo2.png">
-	<style>
-		/* =Elements style
----------------------- */
-		.load-wrapp {
-			display: flex;
-			z-index: 1000;
-			position: fixed;
-			width: 100%;
-			height: 100%;
-			text-align: center;
-			background-color: #9e9e9e;
-			justify-content: center;
-			align-items: center;
-			overflow: hidden;
-		}
-
-		.letter-holder {
-			padding: 16px;
-		}
-
-		.letter {
-			display: inline-block;
-			font-size: calc( (100vw - 480px)/(1920 - 480) * (90 - 30) + 30px);
-			color: rgb(0, 0, 0);
-		}
-
-		/* =Animate the stuff
------------------------- */
-
-		.load .letter {
-			animation-name: loadingF;
-			animation-duration: 1.6s;
-			animation-iteration-count: infinite;
-			animation-direction: linear;
-		}
-
-		.l-1 {
-			animation-delay: 0.48s;
-		}
-
-		.l-2 {
-			animation-delay: 0.6s;
-		}
-
-		.l-3 {
-			animation-delay: 0.72s;
-		}
-
-		.l-4 {
-			animation-delay: 0.84s;
-		}
-
-		.l-5 {
-			animation-delay: 0.96s;
-		}
-
-		.l-6 {
-			animation-delay: 1.08s;
-		}
-
-		.l-7 {
-			animation-delay: 1.2s;
-		}
-
-		.l-8 {
-			animation-delay: 1.32s;
-		}
-
-		.l-9 {
-			animation-delay: 1.44s;
-		}
-
-		.l-10 {
-			animation-delay: 1.56s;
-		}
-
-		@keyframes loadingF {
-			0% {
-				opacity: 0;
-			}
-			50%{
-				opacity: 0;
-			}
-			100% {
-				opacity: 1;
-			}
-		}
-
-		.loaded_hiding .load-wrapp {
-			transition: 0.2s opacity;
-			opacity: 0;
-			overflow: hidden;
-		}
-
-		.loaded .load-wrapp {
-			display: none;
-		}
-	</style>
 </head>
-
 <body>
-
 	<div class="load-wrapp">
 		<div class="load">
 			<div class="letter-holder">
@@ -127,7 +26,6 @@
 			</div>
 		</div>
 	</div>
-
 	<nav id="menu-content">
 		<ul id="menu-frame">
 			<li><a draggable="false" href="#page1" class="active">Главная</a></li>
@@ -137,14 +35,11 @@
 			<li><a draggable="false" href="#page5">Контакты</a></li>
 		</ul>
 	</nav>
-
 	<section id="page1" class="page">
 		<div class="page-area">
 			<header>
 				<h1>
-					<span class="textAnimated">Frontend-разработчик <br>Лемешков Данил <br>$ </span><span class="textMarker">
-						<!-- | -->█
-					</span>
+					<span class="textAnimated">Frontend-разработчик <br>Лемешков Данил <br>$ </span><span class="textMarker">█</span>
 				</h1>
 				<img src="./img/6502421.png" alt="notebook" class="title-img">
 			</header>
@@ -156,21 +51,42 @@
 			<p>Опыт работы с командой, разработка и верстка WEB-приложений. Веду деловую переписку. Пунктуальный,
 				грамотный. Охотно и быстро воспринимаю информацию по указаной тематике. Хочу стать востребованным
 				профессионалом в области Fronted-developer.</p>
-			<span class="user-image"></span>
-			<!-- <img src="./img/user.png" alt="Создатель портфолио" class="user-image" srcset=""> -->
+			<img src="./img/user.png" alt="Будущее фото кандидата" class="user-image" srcset="">
 		</div>
 	</section>
 	<section id="page3" class="page">
 		<div class="page-area">
 			<h3>Навыки</h3>
-			<ul>
+			<dl class="skills-list">
+				<div class="skills-item">
+				<dt class="skill-html">HTML</dt>
+				<dd class="level">
+					<div style="width: 75%;">75%</div>
+				</dd>
+			</div>
+			<div class="skills-item">
+				<dt class="skill-css">CSS</dt>
+				<dd class="level">
+					<div style="width: 60%;">60%</div>
+				</dd>
+			</div>
+			<div class="skills-item">
+				<dt class="skill-js">JS</dt>
+				<dd class="level">
+					<div style="width: 20%;">20%</div>
+				</dd>
+			</div>
+			</dl>
+
+
+			<!-- 			<ul>
 				<li>articulate 360</li>
 				<li>HTML5</li>
 				<li>git</li>
 				<li>JavaScript</li>
 				<li>CSS3</li>
 				<li>Adobe Photoshop</li>
-			</ul>
+			</ul> -->
 		</div>
 	</section>
 	<section id="page4" class="page">
@@ -250,18 +166,13 @@
 	<script src="./script.js"></script>
 	<script>
 		window.onload = function () {
+			/* 			document.documentElement.scrollTop = 0; */
 			document.body.classList.add('loaded_hiding');
 			window.setTimeout(function () {
 				document.body.classList.add('loaded');
 				document.body.classList.remove('loaded_hiding');
 			}, 500);
 		}
-
-		$(function () {
-			$('html, body').animate({
-				scrollTop: 0
-			}, 1);
-		});
 	</script>
 </body>
 
