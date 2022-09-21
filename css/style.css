@@ -353,7 +353,7 @@ h3 {
 #page3>.page-area {
   background: url("../img/background2section.png") left bottom;
   background-size: cover;
-  height: 75vh;
+  margin: 20px 0 20px;
   box-shadow: 0px 0px 73px 0px #00000063;
   border-radius: 35px;
   padding: 2%;
@@ -733,7 +733,7 @@ h3 {
 
 .skill-icon {
   float: left;
-  height: 98px;
+  height: 75px;
   margin: 0 10px 0 0; 
 }
 
