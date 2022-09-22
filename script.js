@@ -63,13 +63,13 @@ $('a[href^="#"]').on('click', function (e) { // Если ссылка являе
 
 //Показ стартово хэдинга побуквенно (эффект печати)
 
-let textHeading = document.querySelector(".textAnimated").innerText;
-document.querySelector(".textAnimated").innerText = "";
+let textHeading = document.querySelector(".text-animated").innerText;
+document.querySelector(".text-animated").innerText = "";
 
 function fun1(num, txt) {
   if (num++ < txt.length) {
     if (num > txt.length - 1) return 0;
-    document.querySelector(".textAnimated").innerText += txt[num];
+    document.querySelector(".text-animated").innerText += txt[num];
     setTimeout(fun1, 50, num, txt);
   }
 }

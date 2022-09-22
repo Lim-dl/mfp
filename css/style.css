@@ -273,7 +273,7 @@ header {
   width: 100%;
 }
 
-.textMarker {
+.text-marker {
   user-select: none;
   transform: translateX(-20px);
   animation: pointInput 1s cubic-bezier(0.85, 0.02, 0, 0.97) infinite;
