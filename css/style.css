@@ -356,7 +356,6 @@ h3 {
   margin: 20px 0 20px;
   box-shadow: 0px 0px 73px 0px #00000063;
   border-radius: 35px;
-  padding: 2%;
   justify-content: center;
   flex-direction: column;
 }
@@ -713,47 +712,51 @@ h3 {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+  margin-bottom: 25px;
 }
 
 .skills-item {
   width: 40%;
-  margin: 10px;
-  min-width: 340px;
+  margin: 25px;
 }
 
 .skills-list dt {
   margin: 0 0 8px;
-  padding-left: 46px;
-  height: 36px;
-  font-size: 24px;
-  letter-spacing: 1px;
+  height: 28px;
   background-repeat: no-repeat;
   background-position: left;
 }
 
 .skill-icon {
   float: left;
-  height: 75px;
-  margin: 0 10px 0 0; 
+  height: 28px;
+  margin: 0 10px 0 0;
 }
 
 .level {
-  margin: 0 0 40px;
-  height: 24px;
+  height: 28px;
   text-align: right;
   background-color: #ffffff;
   box-shadow: inset 0 0 12px #afafaf;
   border: 1px solid var(--mineGray);
   border-radius: 10px;
   overflow: hidden;
-
+  color: #fff;
 }
 
 /* .skills .level div */
-#page3>div>dl>div>dd>div {
+#page3 > div > dl > div > dd > div {
   margin: 0;
   height: 100%;
   letter-spacing: 1px;
   background-color: #5053a8;
   background-image: url(../img/progress-pattern.svg);
+
+}
+
+@media all and (max-width:610px) {
+  .skills-item {
+    width: 100%;
+    margin: 0 0 25px 0;
+  }
 }
