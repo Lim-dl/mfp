@@ -1,19 +1,3 @@
-//Плагин свайпер (в дальнейшем будет выключен)
-var swiper = new Swiper('.blog-slider', {
-  spaceBetween: 30,
-  effect: 'fade',
-  loop: true,
-  mousewheel: {
-    invert: false,
-  },
-  // autoHeight: true,
-  pagination: {
-    el: '.blog-slider__pagination',
-    clickable: true,
-  }
-});
-
-
 //Отслеживание позиции скролла и переключение стилей активной страницы
 var sections = $('section')
   , nav = $('nav')
@@ -36,19 +20,6 @@ $(window).on('scroll', function () {
     }
   });
 });
-/* 
-//Плавный переход (Решение кроссбраузерности)
-nav.find('a').on('click', function () {
-  var $el = $(this)
-    , id = $el.attr('href');
-
-  $('html, body').animate({
-    scrollTop: $(id).offset().top - nav_height
-  }, 500);
-
-  return false;
-}); */
-
 
 //Запрет показа якорей в адресной строке
 $('a[href^="#"]').on('click', function (e) { // Если ссылка является якорем, то выполняем следующее:
@@ -62,7 +33,6 @@ $('a[href^="#"]').on('click', function (e) { // Если ссылка являе
 });
 
 //Показ стартово хэдинга побуквенно (эффект печати)
-
 let textHeading = document.querySelector(".text-animated").innerText;
 document.querySelector(".text-animated").innerText = "";
 
@@ -75,3 +45,18 @@ function fun1(num, txt) {
 }
 
 fun1(-1, textHeading);
+
+//Плагин свайпер (в дальнейшем будет выключен)
+var swiper = new Swiper('.blog-slider', {
+  spaceBetween: 30,
+  effect: 'fade',
+  loop: true,
+  mousewheel: {
+    invert: false,
+  },
+  // autoHeight: true,
+  pagination: {
+    el: '.blog-slider__pagination',
+    clickable: true,
+  }
+});

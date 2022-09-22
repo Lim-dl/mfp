@@ -15,13 +15,13 @@
 	<div class="load-wrapp">
 		<div class="load">
 			<div class="letter-holder">
-				<div class="l-1 letter">L</div>
-				<div class="l-2 letter">o</div>
-				<div class="l-3 letter">a</div>
-				<div class="l-4 letter">d</div>
-				<div class="l-5 letter">i</div>
-				<div class="l-6 letter">n</div>
-				<div class="l-7 letter">g</div>
+				<div class="l-1 letter">Н</div>
+				<div class="l-2 letter">и</div>
+				<div class="l-3 letter"> </div>
+				<div class="l-4 letter">Х</div>
+				<div class="l-5 letter">а</div>
+				<div class="l-6 letter">о</div>
+				<div class="l-7 letter">.</div>
 				<div class="l-8 letter">.</div>
 				<div class="l-9 letter">.</div>
 				<div class="l-10 letter">.</div>
@@ -61,12 +61,13 @@
 	<section id="page3" class="page">
 		<div class="page-area">
 			<h3>Навыки</h3>
-			<dl class="skills-list" title="PS: Все указаные проценты - это приблезительный уровень понимания, &#013;и шкала не означает что в каждом навыке есть предел познания. 😉">
+			<dl class="skills-list"
+				title="PS: Все указаные проценты - это приблезительный уровень понимания, &#013;и шкала не означает что в каждом навыке есть предел познания. 😉">
 				<div class="skills-item">
 					<img src="./img/icon-Articulate360.png" alt="Icon articulate360" class="skill-icon">
-					<dt class="skill-art360" >Articulate 360</dt>
+					<dt class="skill-art360">Articulate 360</dt>
 					<dd class="level">
-						<div style="width: 95%;">95%</div>
+						<div style="width: 95%;" class="percent-skill">95%</div>
 					</dd>
 				</div>
 
@@ -75,7 +76,7 @@
 					<img src="./img/icon-html5.png" alt="Icon HTML5" class="skill-icon">
 					<dt class="skill-html">HTML</dt>
 					<dd class="level">
-						<div style="width: 75%;">75%</div>
+						<div style="width: 75%;" class="percent-skill">75%</div>
 					</dd>
 				</div>
 
@@ -83,16 +84,16 @@
 					<img src="./img/icon-git.png" alt="Icon git" class="skill-icon">
 					<dt class="skill-git">git</dt>
 					<dd class="level">
-						<div style="width: 30%;">30%</div>
+						<div style="width: 30%;" class="percent-skill">30%</div>
 					</dd>
 				</div>
-			
+
 
 				<div class="skills-item">
 					<img src="./img/icon-css3.png" alt="Icon CSS3" class="skill-icon">
 					<dt class="skill-css">CSS</dt>
 					<dd class="level">
-						<div style="width: 60%;">60%</div>
+						<div style="width: 60%;" class="percent-skill">60%</div>
 					</dd>
 				</div>
 
@@ -100,7 +101,7 @@
 					<img src="./img/icon-adobe_ps.png" alt="Icon Adobe Photoshop" class="skill-icon">
 					<dt class="skill-ps">Adobe Photoshop</dt>
 					<dd class="level">
-						<div style="width: 30%;">30%</div>
+						<div style="width: 30%;" class="percent-skill">30%</div>
 					</dd>
 				</div>
 
@@ -108,20 +109,10 @@
 					<img src="./img/icon-js.png" alt="Icon JS" class="skill-icon">
 					<dt class="skill-js">JS</dt>
 					<dd class="level">
-						<div style="width: 20%;">20%</div>
+						<div style="width: 20%;" class="percent-skill">20%</div>
 					</dd>
 				</div>
 			</dl>
-
-
-			<!-- 			<ul>
-				<li>articulate 360</li>
-				<li>HTML5</li>
-				<li>git</li>
-				<li>JavaScript</li>
-				<li>CSS3</li>
-				<li>Adobe Photoshop</li>
-			</ul> -->
 		</div>
 	</section>
 	<section id="page4" class="page">
@@ -201,12 +192,28 @@
 	<script src="./script.js"></script>
 	<script>
 		window.onload = function () {
+			
+			//Скролл к хедингу
 			document.documentElement.scrollTop = 0;
+
+			//Класс для прелоадера
 			document.body.classList.add('loaded_hiding');
 			window.setTimeout(function () {
 				document.body.classList.add('loaded');
 				document.body.classList.remove('loaded_hiding');
 			}, 500);
+
+			//сортировка
+				var items = document.querySelectorAll('.skills-item');
+				// get all items as an array and call the sort method
+				Array.from(items).sort(function (b, a) {
+					// get the text content
+					a = a.querySelector('.percent-skill').innerText.toLowerCase()
+					b = b.querySelector('.percent-skill').innerText.toLowerCase()
+					return (a > b) - (a < b)
+				}).forEach(function (n, i) {
+					n.style.order = i
+				})
 		}
 	</script>
 </body>
