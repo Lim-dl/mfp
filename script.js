@@ -40,13 +40,14 @@ function fun1(num, txt) {
   if (num++ < txt.length) {
     if (num > txt.length - 1) return 0;
     document.querySelector(".text-animated").innerText += txt[num];
-    setTimeout(fun1, 50, num, txt);
+    
+    setTimeout(fun1, 30, num, txt);
   }
 }
 
 fun1(-1, textHeading);
 
-//Плагин свайпер (в дальнейшем будет выключен)
+/* //Плагин свайпер (в дальнейшем будет выключен)
 var swiper = new Swiper('.blog-slider', {
   spaceBetween: 30,
   effect: 'fade',
@@ -59,4 +60,4 @@ var swiper = new Swiper('.blog-slider', {
     el: '.blog-slider__pagination',
     clickable: true,
   }
-});
+}); */
