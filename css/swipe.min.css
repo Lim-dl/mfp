@@ -233,9 +233,9 @@
 .swiper-pagination {
 	position          : absolute;
 	text-align        : center;
-	-webkit-transition: .3s opacity;
-	-o-transition     : .3s opacity;
-	transition        : .3s opacity;
+	-webkit-transition: .1s opacity;
+	-o-transition     : .1s opacity;
+	transition        : .1s opacity;
 	-webkit-transform : translate3d(0, 0, 0);
 	transform         : translate3d(0, 0, 0);
 	z-index           : 10
@@ -352,11 +352,11 @@ button.swiper-pagination-bullet {
 
 .swiper-container-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
 	display           : inline-block;
-	-webkit-transition: .2s top, .2s -webkit-transform;
-	transition        : .2s top, .2s -webkit-transform;
-	-o-transition     : .2s transform, .2s top;
-	transition        : .2s transform, .2s top;
-	transition        : .2s transform, .2s top, .2s -webkit-transform
+	-webkit-transition: .1s top, .1s -webkit-transform;
+	transition        : .1s top, .1s -webkit-transform;
+	-o-transition     : .1s transform, .1s top;
+	transition        : .1s transform, .1s top;
+	transition        : .1s transform, .1s top, .1s -webkit-transform
 }
 
 .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
@@ -372,19 +372,19 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-container-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-	-webkit-transition: .2s left, .2s -webkit-transform;
-	transition        : .2s left, .2s -webkit-transform;
-	-o-transition     : .2s transform, .2s left;
-	transition        : .2s transform, .2s left;
-	transition        : .2s transform, .2s left, .2s -webkit-transform
+	-webkit-transition: .1s left, .1s -webkit-transform;
+	transition        : .1s left, .1s -webkit-transform;
+	-o-transition     : .1s transform, .1s left;
+	transition        : .1s transform, .1s left;
+	transition        : .1s transform, .1s left, .1s -webkit-transform
 }
 
 .swiper-container-horizontal.swiper-container-rtl>.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-	-webkit-transition: .2s right, .2s -webkit-transform;
-	transition        : .2s right, .2s -webkit-transform;
-	-o-transition     : .2s transform, .2s right;
-	transition        : .2s transform, .2s right;
-	transition        : .2s transform, .2s right, .2s -webkit-transform
+	-webkit-transition: .1s right, .1s -webkit-transform;
+	transition        : .1s right, .1s -webkit-transform;
+	-o-transition     : .1s transform, .1s right;
+	transition        : .1s transform, .1s right;
+	transition        : .1s transform, .1s right, .1s -webkit-transform
 }
 
 .swiper-pagination-progressbar {
