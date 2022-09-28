@@ -1,3 +1,28 @@
+window.onload = function () {
+
+  //Скролл к хедингу
+  document.documentElement.scrollTop = 0;
+
+  //Класс для прелоадера
+  document.body.classList.add('loaded_hiding');
+  window.setTimeout(function () {
+    document.body.classList.add('loaded');
+    document.body.classList.remove('loaded_hiding');
+  }, 500);
+
+  //сортировка
+  var items = document.querySelectorAll('.skills-item');
+  // get all items as an array and call the sort method
+  Array.from(items).sort(function (b, a) {
+    // get the text content
+    a = a.querySelector('.percent-skill').innerText.toLowerCase()
+    b = b.querySelector('.percent-skill').innerText.toLowerCase()
+    return (a > b) - (a < b)
+  }).forEach(function (n, i) {
+    n.style.order = i
+  })
+}
+
 //Отслеживание позиции скролла и переключение стилей активной страницы
 var sections = $('section')
   , nav = $('nav')
@@ -6,6 +31,7 @@ var sections = $('section')
 $(window).on('scroll', function () {
   var cur_pos = $(this).scrollTop();
 
+  document.querySelector('.bg').style.backgroundPosition = '50% ' + (window.pageYOffset /2 -10) + "px";
   sections.each(function () {
     var top = $(this).offset().top - nav_height,
       bottom = top + $(this).outerHeight(),
@@ -20,6 +46,10 @@ $(window).on('scroll', function () {
     }
   });
 });
+
+/* window.addEventListener('scroll', function () {
+  document.querySelector('.bg').style.backgroundPosition = '50% ' + (window.pageYOffset /2 -10) + "px";
+}); */
 
 //Запрет показа якорей в адресной строке
 $('a[href^="#"]').on('click', function (e) { // Если ссылка является якорем, то выполняем следующее:
