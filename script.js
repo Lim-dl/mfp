@@ -31,7 +31,8 @@ var sections = $('section')
 $(window).on('scroll', function () {
   var cur_pos = $(this).scrollTop();
 
-  document.querySelector('.bg').style.backgroundPosition = '50% ' + (window.pageYOffset /2 -10) + "px";
+  document.querySelector('.bg').style.backgroundPosition = '50% -' + (window.pageYOffset /2.5) + "px";
+
   sections.each(function () {
     var top = $(this).offset().top - nav_height,
       bottom = top + $(this).outerHeight(),
