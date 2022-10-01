@@ -1,7 +1,7 @@
 window.onload = function () {
 
   //Скролл к хедингу
-  document.documentElement.scrollTop = 0;
+/*   document.documentElement.scrollTop = 0; */
 
   //Класс для прелоадера
   document.body.classList.add('loaded_hiding');
@@ -31,7 +31,7 @@ var sections = $('section')
 $(window).on('scroll', function () {
   var cur_pos = $(this).scrollTop();
 
-  document.querySelector('.bg').style.backgroundPosition = '50% -' + (window.pageYOffset /2.5) + "px";
+  document.querySelector('.bg').style.backgroundPosition = '50% -' + (window.pageYOffset / 2.5) + "px";
 
   sections.each(function () {
     var top = $(this).offset().top - nav_height,
@@ -71,7 +71,7 @@ function fun1(num, txt) {
   if (num++ < txt.length) {
     if (num > txt.length - 1) return 0;
     document.querySelector(".text-animated").innerText += txt[num];
-    
+
     setTimeout(fun1, 30, num, txt);
   }
 }
