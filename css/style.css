@@ -542,6 +542,7 @@ h2 {
   filter: brightness(0.9);
   z-index: 5;
   width: 100%;
+  min-height: 250px;
   transition: all 0.2s;
 }
 
@@ -549,7 +550,7 @@ h2 {
   content: "Открыть";
   position: absolute;
   display: flex;
-  background-image: linear-gradient(0deg, #fff 50%, #00599508);
+  background-image: linear-gradient(0deg, #fff 50%, #ffffff08);
   padding: 50px 35px 11px;
   color: var(--mineBlue);
   font-weight: 500;
