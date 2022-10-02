@@ -209,7 +209,7 @@ body {
   vertical-align: middle;
   width: 20%;
   text-align: center;
-  border-bottom: 3px solid rgb(255, 255, 255);
+  border-bottom: 3px solid transparent;
   transition: border-color 1s cubic-bezier(0.85, 0.03, 0.05, 1.02);
 }
 
