@@ -1,7 +1,7 @@
 window.onload = function () {
 
   //Скролл к хедингу
-/*   document.documentElement.scrollTop = 0; */
+  document.documentElement.scrollTop = 0;
 
   //Класс для прелоадера
   document.body.classList.add('loaded_hiding');
