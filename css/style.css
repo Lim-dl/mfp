@@ -10,7 +10,12 @@
   src: url(../font/Courier_New.ttf);
 }
 
-
+a:active, /* активная/посещенная ссылка */
+a:hover,  /* при наведении */
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
 
 /* ---------------Zeroing--------------- */
 *,
@@ -22,7 +27,7 @@
   text-decoration: none;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  
+
 }
 
 html,
@@ -278,13 +283,16 @@ section {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: stretch;
   align-content: center;
-  justify-content: center;
-  align-items: center;
   max-width: 1200px;
   width: 100%;
   height: 100%;
-  padding: 15px;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 20px;
+  padding-left: 15px;
 }
 
 /* Individual section */
@@ -357,6 +365,7 @@ h2 {
   margin-top: 25px;
   margin-bottom: 25px;
   font-size: 25px;
+  text-align: center;
 }
 
 .user-image {
@@ -366,8 +375,7 @@ h2 {
 }
 
 #page2 {
-  background-color: #ffffffc5;
-  backdrop-filter: blur(20px);
+  background-color: #ffffffed;
   box-shadow: 0 0 25px 1px #00000038;
 }
 
@@ -472,13 +480,11 @@ h2 {
 }
 
 #page4 {
-  background-color: #ffffffc5;
-  backdrop-filter: blur(20px);
+  background-color: #ffffffed;
   box-shadow: 0 0 25px 1px #00000038;
 }
 
 #page4>.page-area {
-  padding: 0;
   max-width: 100vw;
 }
 
@@ -810,36 +816,40 @@ footer {
 }
  */
 .cards-elements {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: inline-flex;
+  align-items: stretch;
+  justify-content: center;
   width: 100%;
   height: 100%;
+  flex-wrap: wrap;
+}
+
+.cards-elements a {
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
 }
 
 .project-item {
   display: flex;
-  justify-content: space-between;
   flex-wrap: nowrap;
-  align-items: center;
-  align-content: center;
+  flex-direction: column;
   background-color: #fff;
-  box-shadow: 5px 5px 15px 0 #b5b5b5;
+  box-shadow: 0px 0px 10px 0 #b5b5b5;
+  border-radius: 25px;
+  margin: 10px;
   width: 445px;
-  min-width: 440px;
-  height: 400px;
+  transition: all 0.2s;
   border-radius: 25px;
   overflow: hidden;
-  margin: 10px;
-  flex-direction: column-reverse;
-  transition: all 0.2s;
 }
 
 .project-item:hover {
   transform: scale3d(1.05, 1.05, 1.05);
 }
+
 /* .project-item:hover {
   animation-name: shadowRotate;
   animation-duration: 5s;
@@ -859,21 +869,67 @@ footer {
 } */
 
 .card-preview {
-  filter: brightness(0.9);
+  display: block;
+  position: relative;
   width: 100%;
   transition: all 0.2s;
 }
-.project-item:hover .card-preview {
+
+.card-preview img {
+  filter: brightness(0.9);
+  z-index: 5;
+  width: 100%;
+  transition: all 0.2s;
+}
+
+.project-item .card-preview::after {
+  content: "Открыть";
+  position: absolute;
+  display: flex;
+  background-image: linear-gradient(0deg, #fff 50%, #00599508);
+  padding: 50px 35px 11px;
+  color: var(--mineBlue);
+  font-weight: 500;
+  letter-spacing: 1px;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  opacity: 0;
+  transition: all 0.2s;
+  transform: translateY(20px);
+  filter: blur(20px);
+}
+
+.project-item:hover .card-preview::after {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0px);
+}
+
+.project-item:hover .card-preview img {
   filter: brightness(0.4);
 }
 
 @media screen and (max-width: 610px) {
   .project-item {
     box-shadow: 0px 0px 15px 0 #b5b5b5;
-    width: 100%;
-    height: 350px;
+    width: 85%;
     border-radius: 0px;
     overflow: hidden;
-    margin: 10px;
+    margin: 25px;
   }
+}
+
+.card-description {
+  display: grid;
+  text-align: center;
+  height: 100%;
+  margin: 10px;
+  align-items: stretch;
+  justify-items: center;
 }
