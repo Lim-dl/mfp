@@ -2,6 +2,7 @@ window.onload = function () {
 
   //Скролл к хедингу
   document.documentElement.scrollTop = 0;
+  document.getElementById("scrollCards").scrollTop = 0;
 
   //Класс для прелоадера
   document.body.classList.add('loaded_hiding');
@@ -11,7 +12,7 @@ window.onload = function () {
   }, 500);
 
   //сортировка
-  
+
 }
 
 //Отслеживание позиции скролла и переключение стилей активной страницы
@@ -36,7 +37,6 @@ $(window).on('scroll', function () {
       $(this).addClass('active');
       nav.find('a[href="#' + $(this).attr('id') + '"]').addClass('active');
     }
-    console.log(top, bottom, middle);
   });
 });
 
@@ -67,3 +67,12 @@ function fun1(num, txt) {
 }
 
 fun1(-1, textHeading);
+
+
+$("#scrollCards").on('scroll', function () {
+  if ($("#scrollCards").scrollTop() <= 5) {
+    $(".scroll-top-but").addClass('hide');
+  } else {
+    $(".scroll-top-but").removeClass('hide');
+  }
+});
