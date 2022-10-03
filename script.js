@@ -11,16 +11,7 @@ window.onload = function () {
   }, 500);
 
   //сортировка
-  var items = document.querySelectorAll('.skills-item');
-  // get all items as an array and call the sort method
-  Array.from(items).sort(function (b, a) {
-    // get the text content
-    a = a.querySelector('.percent-skill').innerText.toLowerCase()
-    b = b.querySelector('.percent-skill').innerText.toLowerCase()
-    return (a > b) - (a < b)
-  }).forEach(function (n, i) {
-    n.style.order = i
-  })
+  
 }
 
 //Отслеживание позиции скролла и переключение стилей активной страницы
@@ -36,7 +27,7 @@ $(window).on('scroll', function () {
   sections.each(function () {
     var top = $(this).offset().top - nav_height,
       bottom = top + $(this).outerHeight(),
-      middle = (bottom - top) / 2;
+      middle = $(this).outerHeight() / 2;
 
     if (cur_pos + middle >= top && cur_pos + middle <= bottom) {
       nav.find('a').removeClass('active');
@@ -45,12 +36,9 @@ $(window).on('scroll', function () {
       $(this).addClass('active');
       nav.find('a[href="#' + $(this).attr('id') + '"]').addClass('active');
     }
+    console.log(top, bottom, middle);
   });
 });
-
-/* window.addEventListener('scroll', function () {
-  document.querySelector('.bg').style.backgroundPosition = '50% ' + (window.pageYOffset /2 -10) + "px";
-}); */
 
 //Запрет показа якорей в адресной строке
 $('a[href^="#"]').on('click', function (e) { // Если ссылка является якорем, то выполняем следующее:
@@ -62,6 +50,8 @@ $('a[href^="#"]').on('click', function (e) { // Если ссылка являе
   }
   return false; // Отменяем переход по ссылке => и вывод якоря в адресную строку
 });
+
+
 
 //Показ стартово хэдинга побуквенно (эффект печати)
 let textHeading = document.querySelector(".text-animated").innerText;
@@ -77,18 +67,3 @@ function fun1(num, txt) {
 }
 
 fun1(-1, textHeading);
-
-/* //Плагин свайпер (в дальнейшем будет выключен)
-var swiper = new Swiper('.blog-slider', {
-  spaceBetween: 30,
-  effect: 'fade',
-  loop: true,
-  mousewheel: {
-    invert: false,
-  },
-  // autoHeight: true,
-  pagination: {
-    el: '.blog-slider__pagination',
-    clickable: true,
-  }
-}); */

@@ -63,7 +63,7 @@ body {
   width: 100%;
   height: 100%;
   text-align: center;
-  background-color: #9e9e9e;
+  background-color: var(--mineBlue);
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -71,6 +71,13 @@ body {
 
 .letter-holder {
   padding: 16px;
+}
+
+.parrto-dance {
+  bottom: -9px;
+  position: absolute;
+  left: 0;
+  max-width: 150px;
 }
 
 .letter {
@@ -87,6 +94,7 @@ body {
   animation-duration: 1.6s;
   animation-iteration-count: infinite;
   animation-direction: linear;
+  color: #fff;
 }
 
 .l-1 {
@@ -130,21 +138,17 @@ body {
 }
 
 @keyframes loadingF {
-  0% {
+  from {
     opacity: 0;
   }
 
-  50% {
-    opacity: 0;
-  }
-
-  100% {
+  to {
     opacity: 1;
   }
 }
 
 .loaded_hiding .load-wrapp {
-  transition: 0.2s opacity;
+  transition: 1s opacity;
   opacity: 0;
   overflow: hidden;
 }
@@ -280,12 +284,6 @@ section {
 }
 
 .page-area {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-evenly;
-  align-items: stretch;
-  align-content: center;
   max-width: 1200px;
   width: 100%;
   height: 100%;
@@ -375,14 +373,21 @@ h2 {
 }
 
 .user-image {
-  margin-top: 25px;
-  display: block;
-  max-width: 100%;
+  margin: 0 10px 10px 0;
+  float: left;
+  max-width: 550px;
 }
 
 #page2 {
   background-color: #ffffffed;
   box-shadow: 0 0 25px 1px #00000038;
+}
+
+@media screen and (max-width: 690px) {
+  .user-image {
+    margin: 0 10px 10px 0;
+    max-width: 100%;
+  }
 }
 
 #page3 {}
@@ -492,6 +497,8 @@ h2 {
 
 #page4>.page-area {
   max-width: 100vw;
+  max-height: 100vh;
+  overflow: auto;
 }
 
 .cards-elements {
@@ -532,7 +539,7 @@ h2 {
   filter: brightness(0.9);
   z-index: 5;
   width: 100%;
-  min-height: 250px;
+  min-height: 160px;
   transition: all 0.2s;
 }
 
