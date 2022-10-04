@@ -377,7 +377,7 @@ h2 {
 .user-image {
   margin: 0 10px 10px 0;
   float: left;
-  max-width: 550px;
+  width: 45%;
 }
 
 #page2 {
@@ -388,7 +388,7 @@ h2 {
 @media screen and (max-width: 690px) {
   .user-image {
     margin: 0 10px 10px 0;
-    max-width: 100%;
+    width: 100%;
   }
 }
 
