@@ -42,7 +42,7 @@ body {
   background: url("../img/bg-mine.png") fixed center center no-repeat;
   background-size: cover;
   z-index: 0;
-
+  min-width: 320px;
 }
 
 .bg {
