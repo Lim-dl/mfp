@@ -634,7 +634,8 @@ button.scroll-top-but:hover {
 
 .block-contact__items {
   white-space: nowrap;
-  width: 320px;
+  max-width: 500px;
+  width: 100%;
 }
 
 img.block-contact__logo {
